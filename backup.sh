@@ -11,11 +11,11 @@ dirs=(Documents Music Photo Pictures Videos)
 
 if [ -e $baklog ]; then
 	for dir in ${dirs[@]}; do
-		rsync -an $dir $bakdir
+		rsync -a $dir $bakdir
 	done
 	touch $baklog 
 else
 	for dir in ${dirs[@]}; do
-		rsync -avn --delete $dir $bakdir >> $baklog
+		rsync -av --delete $dir $bakdir >> $baklog
 	done
 fi
