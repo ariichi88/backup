@@ -10,6 +10,7 @@ cd ~
 dirs=(Documents Music Photo Pictures Videos)
 
 if [ -e $baklog ]; then
+	echo "--------------------" $(date) "--------------------" >> $baklog
 	for dir in ${dirs[@]}; do
 		rsync -av --delete $dir $bakdir >> $baklog
 	done
