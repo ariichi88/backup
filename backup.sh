@@ -3,7 +3,7 @@
 set -eu
 
 readonly bakdir=/media/username/medianame/backupfolder
-readonly baklog=/media/username/medianame/backupfolder/logname
+readonly baklog=$bakdir/logname
 
 cd ~
 

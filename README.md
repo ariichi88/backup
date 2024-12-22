@@ -24,7 +24,7 @@ chmod +x backup.sh
 ## bakdirとbaklogの設定例
 ```
 bakdir=/media/*username*/BACKUP/backup  
-baklog=/media/*username*/BACKUP/backup/backup.log  
+baklog=$bakdir/backup.log  
 ```
 
 ## 使い方
