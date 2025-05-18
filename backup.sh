@@ -2,21 +2,21 @@
 
 set -eu
 
-readonly bakdir=/media/username/medianame/backupfolder
-readonly baklog=$bakdir/logname
+readonly BACKUP_DIR=/media/username/medianame/backupfolder
+readonly BACKUP_LOG=$BACKUP_DIR/logname
 
 cd ~
 
-dirs=(Documents Music Photo Pictures Videos)
+readonly DIRS=(Documents Music Photo Pictures Videos)
 
-if [ -e $baklog ]; then
-	echo "--------------------" $(date) "--------------------" >> $baklog
-	for dir in ${dirs[@]}; do
-		rsync -av --delete $dir $bakdir >> $baklog
+if [ -e $BACKUP_LOG ]; then
+	echo "--------------------" $(date) "--------------------" >> $BACKUP_LOG
+	for _dir in ${DIRS[@]}; do
+		rsync -av --delete $_dir $BACKUP_DIR >> $BACKUP_LOG
 	done
 else
-	for dir in ${dirs[@]}; do
-		rsync -a $dir $bakdir
+	for _dir in ${DIRS[@]}; do
+		rsync -a $_dir $BACKUP_DIR
 	done
-	touch $baklog 
+	touch $BACKUP_LOG 
 fi
