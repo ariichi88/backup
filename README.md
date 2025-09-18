@@ -1,6 +1,9 @@
 # backup 
 ホームフォルダ内の各フォルダを外付けHDDにバックアップするツール  
 
+## 注意
+Linux（Ubuntu）用のシェルスクリプトです  
+
 ## 準備
 外付けのHDD又はSSDの準備  
 
@@ -23,8 +26,8 @@ chmod +x backup.sh
 
 ## bakdirとbaklogの設定例
 ```
-BACKUP_DIR=/media/*username*/BACKUP/backup  
-BACKUP_LOG=$BACKUP_DIR/backup.log  
+BACKUP_DIR=/media/*username*/BACKUP/*backupfolder*  
+BACKUP_LOG=$BACKUP_DIR/*logname*  
 ```
 
 ## 使い方
