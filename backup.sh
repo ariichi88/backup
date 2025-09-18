@@ -2,7 +2,7 @@
 
 set -eu
 
-readonly BACKUP_DIR=/media/*username*/medianame/*backupfolder*
+readonly BACKUP_DIR=/media/*username*/*medianame*/*backupfolder*
 readonly BACKUP_LOG=$BACKUP_DIR/*logname*
 
 cd ~
