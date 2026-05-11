@@ -8,8 +8,8 @@ Linux（Ubuntu）用のシェルスクリプト
 外付けのHDD又はSSDの準備  
 
 ## 設定
-BACKUP_DIR=/media/*username*/*medianame*/*backupfolder*
-BACKUP_LOG=$BACKUP_DIR/*logname*
+BACKUP_DIR=/media/*username*/*medianame*/*backupfolder*  
+BACKUP_LOG=$BACKUP_DIR/*logname*  
 
 ## backup.shに実行権限を付与
 ```
